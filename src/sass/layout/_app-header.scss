@@ -1,0 +1,5 @@
+#app-header {
+    @extend %pos;
+    bottom: auto;
+    border-bottom: 1px solid rgba(#fff, .25);
+}
