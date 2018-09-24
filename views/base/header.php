@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="dist/app.css">
 </head>
 
-<body class="bg-light">
+<body>
 
     <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
         <symbol id="search-icon" viewBox="0 0 488.4 488.4">
@@ -39,18 +39,24 @@
         <symbol id="youtube-icon" viewBox="0 0 576 512">
             <path d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z"></path>
         </symbol>
+
+        <symbol id="quote-icon" viewBox="0 0 32 32">
+            <path d="M0,4v12h8c0,4.41-3.586,8-8,8v4c6.617,0,12-5.383,12-12V4H0z"/>
+			<path d="M20,4v12h8c0,4.41-3.586,8-8,8v4c6.617,0,12-5.383,12-12V4H20z"/>
+        </symbol>
     </svg>
 
     <!-- Header Main -->
     <header id="app-header">
-        <div class="container-fluid d-flex justify-content-between align-items-center p-0 pl-4">
+        <div class="container-fluid d-flex justify-content-between align-items-center p-0 pl-lg-4">
             <div class="header-item d-flex align-items-center">
                 <div class="logo position-relative">
-                    <a href="#" class="logo-link"><img src="images/icon/logo/logo.png" alt="logo"></a>
+                    <a href="#" class="logo-link d-flex justify-content-center align-items-center position-absolute"><img
+                            src="images/icon/logo/logo.png" alt="logo"></a>
                 </div>
-                <div class="search">
+                <div class="search d-none d-sm-flex align-items-center">
                     <form id="form-search" class="form form--search">
-                        <input class="form-control" type="search" placeholder="Поиск">
+                        <input class="form-control" type="search" placeholder="Поиск...">
                         <div class="search-btn position-absolute">
                             <svg width="25" height="25">
                                 <use xlink:href="#search-icon"></use>
@@ -59,24 +65,27 @@
                     </form>
                 </div>
             </div>
-            <div class="header-item d-flex">
-                <ul class="nav-social-list list-unstyled d-flex">
-                    <li class="nav-social-list-item">
-                        <a href="#" class="nav-social-list-item__link">
-                            войти
+            <div class="header-item d-flex justify-content-end justify-content-lg-between align-items-center">
+                <ul class="login-list list-unstyled d-none d-lg-flex">
+                    <li class="login-list-item">
+                        <a href="#" class="login-list-item__link">
+                            Войти
                             <svg width="25" height="25">
                                 <use xlink:href="#user-icon"></use>
                             </svg>
                         </a>
                     </li>
-                    <li class="nav-social-list-item">
+                </ul>
+                <div class="decoration-line d-none d-lg-block"></div>
+                <ul class="nav-social-list list-unstyled d-none d-lg-flex">
+                    <li class="nav-social-list-item mr-3">
                         <a href="#" class="nav-social-list-item__link">
                             <svg width="25" height="25">
                                 <use xlink:href="#facebook-icon"></use>
                             </svg>
                         </a>
                     </li>
-                    <li class="nav-social-list-item">
+                    <li class="nav-social-list-item mr-3">
                         <a href="#" class="nav-social-list-item__link">
                             <svg width="25" height="25">
                                 <use xlink:href="#instagram-icon"></use>
@@ -93,16 +102,73 @@
                 </ul>
                 <?php
                     foreach($phones as $phone) {
-                        echo '<div class="contact-phone">'
-                        . '<a href="tel:' . str_replace(['(', ')', '-', ' '], '', $phone) . '" class="contact-phone-link">' . $phone . '</a>'
+                        echo '<div class="contact-phone d-none d-lg-block">'
+                        . '<a href="tel:' . str_replace(['(', ')', '-', ' '], '', $phone) . '" class="contact-phone-link text-white">' . $phone . '</a>'
                         . '</div>';
                     }
                 ?>
-                <div class="burger-menu">
+                <div class="burger-menu d-flex flex-column justify-content-center align-items-center position-relative">
                     <div class="line line--top"></div>
                     <div class="line line--middle"></div>
                     <div class="line line--bottom"></div>
+                    <div class="line line-close line--left"></div>
+                    <div class="line line-close line--right"></div>
+                </div>
+                <div class="menu position-absolute d-flex align-items-center">
+                    <ul class="menu-nav-list list-unstyled">
+                        <li class="menu-nav-list-item">
+                            <a href="#" class="menu-nav-list-item__link">
+                                о нас
+                            </a>
+                        </li>
+                        <li class="menu-nav-list-item">
+                            <a href="#" class="menu-nav-list-item__link">
+                                программа и стоимость
+                            </a>
+                        </li>
+                        <li class="menu-nav-list-item">
+                            <a href="#" class="menu-nav-list-item__link">
+                                учебные материалы
+                            </a>
+                        </li>
+                        <li class="menu-nav-list-item">
+                            <a href="#" class="menu-nav-list-item__link">
+                                преподаватели
+                            </a>
+                        </li>
+                        <li class="menu-nav-list-item">
+                            <a href="#" class="menu-nav-list-item__link">
+                                вакансии
+                            </a>
+                        </li>
+                        <li class="menu-nav-list-item">
+                            <a href="#" class="menu-nav-list-item__link">
+                                отзывы
+                            </a>
+                        </li>
+                        <li class="menu-nav-list-item">
+                            <a href="#" class="menu-nav-list-item__link">
+                                вопросы
+                            </a>
+                        </li>
+                        <li class="menu-nav-list-item">
+                            <a href="#" class="menu-nav-list-item__link">
+                                фотогалерея
+                            </a>
+                        </li>
+                        <li class="menu-nav-list-item">
+                            <a href="#" class="menu-nav-list-item__link">
+                                статьи
+                            </a>
+                        </li>
+                        <li class="menu-nav-list-item">
+                            <a href="#" class="menu-nav-list-item__link">
+                                контакты
+                            </a>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </div>
     </header>
+    
