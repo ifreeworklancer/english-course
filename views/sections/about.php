@@ -1,5 +1,5 @@
 <!-- About -->
-<section id="header-banner">
+<section id="about">
     <div class="container">
         <div class="row">
             <div class="about-img about-img--left position-absolute d-none d-lg-block" style="background-image: url('images/content/about/about-item-1.jpg');"></div>

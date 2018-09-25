@@ -1,4 +1,4 @@
-.header-banner-slider, .header-banner-slider-item, #app-header, .header-item .logo::before {
+.header-banner-slider, .header-banner-slider-item, #app-header, .header-item .logo::before, .parallax, .luck-item-hover {
   position: absolute;
   top: 0;
   left: 0;
@@ -6,7 +6,7 @@
   bottom: 0;
 }
 
-.header-banner-slider-item, .about-img {
+.header-banner-slider-item, .about-img, .luck-item {
   background-size: cover;
   background-position: 50% 50%;
   background-repeat: no-repeat;
@@ -9572,7 +9572,7 @@ section {
           transform: translateY(-50%);
   width: 30px;
   height: 1px;
-  background: #2f3743;
+  background: #336265;
 }
 
 .section-description-title {
@@ -10135,7 +10135,7 @@ section {
   top: 420px;
   left: 60%;
   right: 0;
-  height: 1100px;
+  height: 1250px;
 }
 
 .quote-item {
@@ -10184,4 +10184,120 @@ section {
 
 .quote-item__icon svg {
   fill: #1e1e1e;
+}
+
+#methods {
+  padding: 130px 0 110px;
+  background: url("../images/bg/methods-bg.jpg") 50% 50%/cover no-repeat;
+}
+
+.methods-item {
+  z-index: 11;
+}
+
+.methods-item .btn {
+  border: 2px solid #fff;
+  padding: 10px 50px;
+}
+
+.methods-item .btn:hover {
+  color: #fff;
+  background: #2f3743;
+}
+
+.parallax {
+  z-index: 10;
+}
+
+@media (max-width: 992px) {
+  .parallax-item {
+    display: none;
+  }
+}
+
+.parallax-item img {
+  width: auto;
+}
+
+.parallax-item-1 {
+  top: -220px;
+  left: 70px;
+}
+
+.parallax-item-2 {
+  top: -240px;
+  left: 40%;
+}
+
+.parallax-item-3 {
+  top: 60px;
+  right: 50px;
+}
+
+.parallax-item-4 {
+  left: 70px;
+  bottom: -70px;
+}
+
+.parallax-item-5 {
+  right: 40%;
+  bottom: -30px;
+}
+
+.parallax-item-6 {
+  right: -20px;
+  bottom: -20px;
+}
+
+.parallax-item-7 {
+  right: 20px;
+  bottom: 50px;
+}
+
+#luck {
+  padding: 100px 0 80px;
+}
+
+.luck-item {
+  position: relative;
+  padding: 380px 50px 50px;
+  overflow: hidden;
+}
+
+.luck-item-hover {
+  padding: 50px 30px 15px;
+  -webkit-transform: translateY(560px);
+          transform: translateY(560px);
+  background: rgba(47, 55, 67, 0.9);
+  -webkit-transition: .7s;
+  transition: .7s;
+}
+
+@media (max-width: 992px) {
+  .luck-item-hover {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    padding: 30px 15px 15px;
+  }
+}
+
+.luck-item-hover-title {
+  width: 100%;
+  font-family: 'FuturaMediumC', sans-serif;
+  border-bottom: 2px solid #336265;
+}
+
+.luck-item-title {
+  font-family: 'FuturaMediumC', sans-serif;
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+.luck-item:hover .luck-item-hover {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+}
+
+.luck-item:hover .luck-item-title {
+  opacity: 0;
 }

@@ -15,7 +15,7 @@
     </div>
     <div class="container-fluid">
         <div class="row">
-            <div class="col-sm-4 mb-3 mb-sm-0">
+            <div class="col-lg-4 mb-3 mb-lg-0 pr-lg-1">
                 <div class="luck-item text-white" style="background-image: url('images/content/luck/luck-item-1.jpg');">
                     <div class="luck-item-hover d-flex flex-column justify-content-end align-items-start">
                         <div class="luck-item-hover-title pb-3">
@@ -23,8 +23,7 @@
                         </div>
                         <p class="luck-item-hover-decription pt-3">
                             Опытные методисты проверяют работу преподавателей, следят за выполнением всех требований
-                            методики которая используется в ENGLISHLAND, помогают разрешать сложные педагогические и
-                            методические ситуации.
+                            методики которая используется в ENGLISHLAND.
                         </p>
                     </div>
                     <div class="luck-item-title">
@@ -32,7 +31,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-sm-4 mb-3 mb-sm-0">
+            <div class="col-lg-4 mb-3 mb-lg-0 px-lg-0">
                 <div class="luck-item text-white" style="background-image: url('images/content/luck/luck-item-2.jpg');">
                     <div class="luck-item-hover d-flex flex-column justify-content-end align-items-start">
                         <div class="luck-item-hover-title pb-3">
@@ -49,7 +48,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-sm-4 mb-3 mb-sm-0">
+            <div class="col-lg-4 mb-3 mb-lg-0 pl-lg-1">
                 <div class="luck-item text-white" style="background-image: url('images/content/luck/luck-item-3.jpg');">
                     <div class="luck-item-hover d-flex flex-column justify-content-end align-items-start">
                         <div class="luck-item-hover-title pb-3">
@@ -58,7 +57,7 @@
                         <p class="luck-item-hover-decription pt-3">
                             Опытные методисты проверяют работу преподавателей, следят за выполнением всех требований
                             методики которая используется в ENGLISHLAND, помогают разрешать сложные педагогические и
-                            методические ситуации.
+                            методические ситуации.Опытные методисты проверяют работу преподавателей.
                         </p>
                     </div>
                     <div class="luck-item-title">
