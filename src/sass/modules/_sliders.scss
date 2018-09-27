@@ -121,3 +121,99 @@
         }
     }
 }
+
+.reviews-slider {
+    position: relative;
+
+    .flickity-page-dots {
+        width: auto;
+        left: 52%;
+        transform: translateX(-50%);
+        bottom: -87px;
+        z-index: 20;
+
+        li {
+            width: 5px;
+            height: 5px;
+            background: transparent;
+            border: 1px solid $dark;
+
+            @media (max-width: map_get($grid-breakpoints, sm)) {
+                margin: 0 4px;
+            }
+
+            &.is-selected {
+                border-color: #336265;
+                background: #336265;
+            }
+        }
+    }
+
+    &-item {
+        width: 100%;
+
+        &-content {
+            display: flex;
+            justify-content: flex-start;
+            align-items: flex-start;
+
+            @media (max-width: map_get($grid-breakpoints, md)) {
+                flex-direction: column;
+                align-items: center;
+                margin-top: 40px;
+            }
+
+            &-main {
+                width: 100%;
+                max-width: 350px;
+
+                &-info {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    border-bottom: 1px solid $primary;
+
+                    &__name {
+                        padding-bottom: 15px;
+                    }
+
+                    &__data {
+                        font-size: 16px;
+                        color: #808080;
+                    }
+                }
+
+                &-description {
+                    padding-top: 15px;
+
+                    .btn {
+                        position: relative;
+                        padding: 10px 60px 10px 30px;
+                        font-size: 16px;
+
+                        &::before {
+                            content: '';
+                            position: absolute;
+                            top: 50%;
+                            transform: translateY(-50%);
+                            right: 20px;
+                            width: 20px;
+                            height: 20px;
+                            background-size: contain;
+                            background-repeat: no-repeat;
+                            background-image: url(data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiIGlkPSJDYXBhXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IiB2aWV3Qm94PSIwIDAgNjAgNjAiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDYwIDYwOyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+PHBhdGggZmlsbD0iIzMzNjI2NSIgZD0iTTMwLDBDMTMuNDU4LDAsMCwxMy40NTgsMCwzMHMxMy40NTgsMzAsMzAsMzBzMzAtMTMuNDU4LDMwLTMwUzQ2LjU0MiwwLDMwLDB6IE00NS41NjMsMzAuODI2bC0yMiwxNUMyMy4zOTQsNDUuOTQxLDIzLjE5Nyw0NiwyMyw0NmMtMC4xNiwwLTAuMzIxLTAuMDM4LTAuNDY3LTAuMTE2QzIyLjIwNSw0NS43MTEsMjIsNDUuMzcxLDIyLDQ1VjE1YzAtMC4zNzEsMC4yMDUtMC43MTEsMC41MzMtMC44ODRjMC4zMjgtMC4xNzQsMC43MjQtMC4xNSwxLjAzMSwwLjA1OGwyMiwxNUM0NS44MzYsMjkuMzYsNDYsMjkuNjY5LDQ2LDMwUzQ1LjgzNiwzMC42NCw0NS41NjMsMzAuODI2eiIvPjwvc3ZnPg==);
+                        }
+                    }
+                }
+            }
+
+            &__img {
+                position: relative;
+                margin-right: 40px;
+                width: 115px;
+                height: 115px;
+                @extend %img;
+            }
+        }
+    }
+}

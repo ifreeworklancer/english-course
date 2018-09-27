@@ -1,0 +1,63 @@
+.modal-feedback {
+    @extend %pos;
+    top: auto;
+    padding: 80px 95px;
+    border-radius: 10px;
+    background: $dark;
+    z-index: 999999;
+    visibility: hidden;
+    transform: translateY(700px);
+    transition: transform .3s linear .3s;
+
+    &.is-active {
+        visibility: visible;
+        transform: translateY(0);
+    }
+
+    &.is-close {
+        transform: translateY(700px);
+    }
+
+    
+    @media (max-width: map_get($grid-breakpoints, sm)) {
+        padding: 30px 15px;
+    }
+
+    .closs-modal {
+        top: 15px;
+        right: 15px;
+        width: 30px;
+        height: 30px;
+        border: 2px solid #fff;
+        border-radius: 50%;
+        transition: .5s;
+        opacity: .35;
+        cursor: pointer;
+
+        .line {
+            width: 10px;
+            height: 2px;
+            background: #fff;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+
+            &--left {
+                transform: translate(-50%, -50%) rotate(-45deg);
+            }
+
+            &--right {
+                transform: translate(-50%, -50%) rotate(45deg);
+            }
+        }
+
+        &:hover {
+            opacity: 1;
+            border-color: $danger;
+        }
+    }
+
+    &__title {
+        color: #fff;
+    }
+}
