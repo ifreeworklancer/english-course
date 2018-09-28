@@ -1,26 +1,28 @@
 <!-- Methods -->
 <section id="methods">
     <div class="parallax">
-        <div class="parallax-item parallax-item-1 position-absolute">
-            <img src="images/content/methods/parallax/parallax-item-1.png" alt="">
-        </div>
-        <div class="parallax-item parallax-item-2 position-absolute">
-            <img src="images/content/methods/parallax/parallax-item-2.png" alt="">
-        </div>
-        <div class="parallax-item parallax-item-3 position-absolute">
-            <img src="images/content/methods/parallax/parallax-item-3.png" alt="">
-        </div>
-        <div class="parallax-item parallax-item-4 position-absolute">
-            <img src="images/content/methods/parallax/parallax-item-4.png" alt="">
-        </div>
-        <div class="parallax-item parallax-item-5 position-absolute">
-            <img src="images/content/methods/parallax/parallax-item-5.png" alt="">
-        </div>
-        <div class="parallax-item parallax-item-6 position-absolute">
-            <img src="images/content/methods/parallax/parallax-item-6.png" alt="">
-        </div>
-        <div class="parallax-item parallax-item-7 position-absolute">
-            <img src="images/content/methods/parallax/parallax-item-7.png" alt="">
+        <div class="parallax-content">
+            <div class="parallax-item parallax-item-1 position-absolute">
+                <img src="images/content/methods/parallax/parallax-item-1.png" alt="">
+            </div>
+            <div class="parallax-item parallax-item-2 position-absolute">
+                <img src="images/content/methods/parallax/parallax-item-2.png" alt="">
+            </div>
+            <div class="parallax-item parallax-item-3 position-absolute">
+                <img src="images/content/methods/parallax/parallax-item-3.png" alt="">
+            </div>
+            <div class="parallax-item parallax-item-4 position-absolute">
+                <img src="images/content/methods/parallax/parallax-item-4.png" alt="">
+            </div>
+            <div class="parallax-item parallax-item-5 position-absolute">
+                <img src="images/content/methods/parallax/parallax-item-5.png" alt="">
+            </div>
+            <div class="parallax-item parallax-item-6 position-absolute">
+                <img src="images/content/methods/parallax/parallax-item-6.png" alt="">
+            </div>
+            <div class="parallax-item parallax-item-7 position-absolute">
+                <img src="images/content/methods/parallax/parallax-item-7.png" alt="">
+            </div>
         </div>
     </div>
     <div class="container">

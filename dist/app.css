@@ -1,4 +1,4 @@
-.header-banner-slider, .header-banner-slider-item, .modal-feedback, #app-header, .header-item .logo::before, .parallax, .luck-item-hover {
+.header-banner-slider, .header-banner-slider-item, .modal-feedback, #app-header, .header-item .logo::before, .parallax, #luck::before, #reviews::before {
   position: absolute;
   top: 0;
   left: 0;
@@ -6,7 +6,7 @@
   bottom: 0;
 }
 
-.header-banner-slider-item, .reviews-slider-item-content__img, .about-img, .luck-item {
+.header-banner-slider-item, .reviews-slider-item-content__img, .about-img, .poster, .scene .info header {
   background-size: cover;
   background-position: 50% 50%;
   background-repeat: no-repeat;
@@ -9901,8 +9901,115 @@ section {
   border-radius: 2px;
 }
 
+#form-feedback {
+  position: relative;
+}
+
 #form-feedback .form-group-item .form-group {
-  width: 33%;
+  width: 100%;
+}
+
+@media (min-width: 576px) {
+  #form-feedback .form-group-item .form-group {
+    width: 50%;
+  }
+}
+
+@media (min-width: 992px) {
+  #form-feedback .form-group-item .form-group {
+    width: 30%;
+  }
+}
+
+#form-feedback .form-group-item .form-group .faux-select {
+  position: relative;
+  list-style-type: none;
+  margin: 0;
+  padding: 0.555em 0;
+  background: #336265;
+  color: #fff;
+  text-align: left;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  font-size: 18px;
+}
+
+#form-feedback .form-group-item .form-group .faux-select li {
+  padding: 0;
+  text-indent: 1em;
+  position: relative;
+}
+
+#form-feedback .form-group-item .form-group .faux-select li .options {
+  position: absolute;
+  list-style-type: none;
+  top: 1.5em;
+  left: 0;
+  right: 0;
+  display: block;
+  margin: 0.4em 0 0 0;
+  padding: 0;
+  width: 100%;
+  max-height: 0px;
+  overflow: hidden;
+  color: #2f3743;
+  background: transparent;
+  border: none;
+  border-radius: 5px;
+  -webkit-transition: all ease 0.25s;
+  transition: all ease 0.25s;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+#form-feedback .form-group-item .form-group .faux-select li .options li {
+  padding: 0.4em 0;
+  -webkit-transition: .5s;
+  transition: .5s;
+  font-size: 18px;
+}
+
+#form-feedback .form-group-item .form-group .faux-select li .options li:hover {
+  background: #8ce6ec;
+}
+
+#form-feedback .form-group-item .form-group .faux-select li .options li:last-of-type {
+  border-bottom: 0;
+}
+
+#form-feedback .form-group-item .form-group .faux-select li .options.open {
+  max-height: 1000%;
+  background: #fff;
+  font-size: 18px;
+  border: none;
+}
+
+#form-feedback .form-group-item .form-group .faux-select:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 15px;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 10px 6px 0 6px;
+  border-color: #8ce6ec transparent transparent transparent;
+  -webkit-transition: all ease 0.25s;
+  transition: all ease 0.25s;
+}
+
+#form-feedback .form-group-item .form-group .faux-select.open:before {
+  border-width: 0 6px 10px 6px;
+  border-color: transparent transparent #8ce6ec transparent;
 }
 
 .header-banner-slider {
@@ -10561,48 +10668,249 @@ section {
   padding: 100px 0 80px;
 }
 
-.luck-item {
-  position: relative;
-  padding: 380px 50px 50px;
-  overflow: hidden;
+#luck .section-description {
+  margin-bottom: 90px;
 }
 
-.luck-item-hover {
-  padding: 50px 30px 15px;
-  -webkit-transform: translateY(560px);
-          transform: translateY(560px);
-  background: rgba(47, 55, 67, 0.9);
-  -webkit-transition: .7s;
-  transition: .7s;
+#luck::before {
+  content: '';
+  top: 100px;
+  left: 50%;
+  background: #e9fcfd;
+  z-index: -40;
 }
 
-@media (max-width: 992px) {
-  .luck-item-hover {
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
-    padding: 30px 15px 15px;
+.stage {
+  list-style: none;
+  padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media (max-width: 1200px) {
+  .stage {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
 }
 
-.luck-item-hover-title {
-  width: 100%;
-  font-family: 'FuturaMediumC', sans-serif;
-  border-bottom: 2px solid #336265;
+.poster-title {
+  z-index: 10;
+  left: 30px;
+  bottom: 30px;
+  color: #fff;
+  font-size: 18px;
 }
 
-.luck-item-title {
-  font-family: 'FuturaMediumC', sans-serif;
-  -webkit-transition: .5s;
-  transition: .5s;
+/*************************************
+Build the scene and rotate on hover
+**************************************/
+.scene {
+  width: 300px;
+  height: 450px;
+  margin: 30px;
+  -webkit-perspective: 1000px;
+  perspective: 1000px;
 }
 
-.luck-item:hover .luck-item-hover {
-  -webkit-transform: translateY(0);
-          transform: translateY(0);
+.movie {
+  width: 300px;
+  height: 450px;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-transform: translateZ(-150px);
+          transform: translateZ(-150px);
+  -webkit-transition: -webkit-transform 350ms;
+  transition: -webkit-transform 350ms;
+  transition: transform 350ms;
+  transition: transform 350ms, -webkit-transform 350ms;
 }
 
-.luck-item:hover .luck-item-title {
-  opacity: 0;
+@media (max-width: 1200px) {
+  .movie.active {
+    -webkit-transform: rotateY(-78deg) translateZ(20px);
+            transform: rotateY(-78deg) translateZ(20px);
+  }
+}
+
+.movie:hover {
+  -webkit-transform: rotateY(-78deg) translateZ(20px);
+          transform: rotateY(-78deg) translateZ(20px);
+}
+
+/*************************************
+Transform and style the two planes
+**************************************/
+.movie .poster,
+.movie .info {
+  position: absolute;
+  width: 300px;
+  height: 450px;
+  background-color: #fff;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.movie .poster {
+  -webkit-transform: translateZ(150px);
+          transform: translateZ(150px);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}
+
+.movie .info {
+  -webkit-transform: rotateY(90deg) translateZ(150px);
+          transform: rotateY(90deg) translateZ(150px);
+  border: 1px solid #B8B5B5;
+  font-size: 0.75em;
+}
+
+/*************************************
+Shadow beneath the 3D object
+**************************************/
+.csstransforms3d .movie::after {
+  content: '';
+  width: 300px;
+  height: 260px;
+  position: absolute;
+  bottom: 0;
+  -webkit-box-shadow: 0 30px 50px rgba(0, 0, 0, 0.3);
+          box-shadow: 0 30px 50px rgba(0, 0, 0, 0.3);
+  -webkit-transform-origin: 100% 100%;
+          transform-origin: 100% 100%;
+  -webkit-transform: rotateX(90deg) translateY(150px);
+          transform: rotateX(90deg) translateY(150px);
+  -webkit-transition: -webkit-box-shadow 350ms;
+  transition: -webkit-box-shadow 350ms;
+  transition: box-shadow 350ms;
+  transition: box-shadow 350ms, -webkit-box-shadow 350ms;
+}
+
+.csstransforms3d .movie:hover::after {
+  -webkit-box-shadow: 20px -5px 50px rgba(0, 0, 0, 0.3);
+          box-shadow: 20px -5px 50px rgba(0, 0, 0, 0.3);
+}
+
+/*************************************
+Movie information
+**************************************/
+.info header {
+  color: #FFF;
+  padding: 7px 10px;
+  font-weight: bold;
+  height: 195px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  text-shadow: 0px 1px 1px black;
+}
+
+.info header h1 {
+  margin: 0 0 2px;
+  padding: 10px 0 0 20px;
+  font-size: 1.4em;
+}
+
+.info header .rating {
+  border: 1px solid #FFF;
+  padding: 0px 3px;
+}
+
+.info p {
+  padding: 1.2em 1.4em;
+  margin: 2px 0 0;
+  font-weight: 700;
+  color: #666;
+  line-height: 1.4em;
+  border-top: 10px solid #555;
+}
+
+/*************************************
+Generate "lighting" using box shadows
+**************************************/
+.movie .poster,
+.movie .info,
+.movie .info header {
+  -webkit-transition: -webkit-box-shadow 350ms;
+  transition: -webkit-box-shadow 350ms;
+  transition: box-shadow 350ms;
+  transition: box-shadow 350ms, -webkit-box-shadow 350ms;
+}
+
+.csstransforms3d .movie .poster {
+  -webkit-box-shadow: inset 0px 0px 40px rgba(255, 255, 255, 0);
+          box-shadow: inset 0px 0px 40px rgba(255, 255, 255, 0);
+}
+
+.csstransforms3d .movie:hover .poster {
+  -webkit-box-shadow: inset 300px 0px 40px rgba(255, 255, 255, 0.8);
+          box-shadow: inset 300px 0px 40px rgba(255, 255, 255, 0.8);
+}
+
+.csstransforms3d .movie .info,
+.csstransforms3d .movie .info header {
+  -webkit-box-shadow: inset -300px 0px 40px rgba(0, 0, 0, 0.5);
+          box-shadow: inset -300px 0px 40px rgba(0, 0, 0, 0.5);
+}
+
+.csstransforms3d .movie:hover .info,
+.csstransforms3d .movie:hover .info header {
+  -webkit-box-shadow: inset 0px 0px 40px rgba(0, 0, 0, 0);
+          box-shadow: inset 0px 0px 40px rgba(0, 0, 0, 0);
+}
+
+/*************************************
+Posters and still images
+**************************************/
+.scene:nth-child(1) .movie .poster {
+  background-image: url(../images/content/luck/poster-luck-item-1.jpg);
+}
+
+.scene:nth-child(2) .poster {
+  background-image: url(../images/content/luck/poster-luck-item-2.jpg);
+}
+
+.scene:nth-child(3) .poster {
+  background-image: url(../images/content/luck/poster-luck-item-3.jpg);
+}
+
+.scene:nth-child(1) .info header {
+  background-image: url(../images/content/luck/luck-item-1.jpg);
+}
+
+.scene:nth-child(2) .info header {
+  background-image: url(../images/content/luck/luck-item-2.jpg);
+}
+
+.scene:nth-child(3) .info header {
+  background-image: url(../images/content/luck/luck-item-3.jpg);
+}
+
+/*************************************
+Fallback
+**************************************/
+.no-csstransforms3d .movie .poster,
+.no-csstransforms3d .movie .info {
+  position: relative;
+}
+
+/*************************************
+Media Queries
+**************************************/
+@media screen and (max-width: 60.75em) {
+  .scene {
+    float: none;
+    margin: 30px auto 60px;
+  }
 }
 
 #reviews {
@@ -10611,4 +10919,119 @@ section {
 
 #reviews .header-banner-slider-nav {
   margin: 40px 0 60px;
+  background: transparent;
+}
+
+#reviews::before {
+  content: '';
+  top: 0;
+  left: 50%;
+  background: #e9fcfd;
+  z-index: -40;
+}
+
+#feedback {
+  padding: 240px 0 225px;
+  background: url("../images/bg/feedback-bg.jpg") 50% 50%/cover no-repeat;
+}
+
+#feedback .container {
+  position: relative;
+}
+
+#feedback .container::before {
+  content: '';
+  position: absolute;
+  top: -80px;
+  left: -120px;
+  right: -120px;
+  bottom: -100px;
+  border: 15px solid rgba(51, 98, 101, 0.7);
+}
+
+@media (max-width: 992px) {
+  #feedback .container::before {
+    display: none;
+  }
+}
+
+#app-footer {
+  position: relative;
+  padding-top: 70px;
+  background: #2f3743;
+}
+
+#app-footer::before {
+  content: '';
+  position: absolute;
+  top: 15px;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.footer-menu-list {
+  margin: 0;
+}
+
+.footer-menu-list-item__link {
+  font-size: 16px;
+  font-family: 'FuturaMediumC', sans-serif;
+  text-transform: uppercase;
+  color: #bde1ee;
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+.footer-menu-list-item__link:hover {
+  color: #fff;
+}
+
+.footer-list-title {
+  position: relative;
+  padding-left: 50px;
+  font-size: 14px;
+  color: #fff;
+}
+
+.footer-list-title::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  width: 35px;
+  height: 1px;
+  background: #8ce6ec;
+}
+
+.nav-social-list svg {
+  fill: #8ce6ec;
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+.nav-social-list svg:hover {
+  fill: #336265;
+}
+
+.footer-copyr {
+  position: relative;
+  color: #8192ab;
+}
+
+.footer-copyr::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -1000px;
+  right: -1000px;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.footer-copyr .text-bold {
+  font-family: 'FuturaMediumC', sans-serif;
 }

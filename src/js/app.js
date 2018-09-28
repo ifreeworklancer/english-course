@@ -36,26 +36,43 @@ import 'flickity/dist/flickity.css';
         }
     });
 
-    $('.form-check-label').on('click', function() {
+    $('.form-check-label').on('click', function () {
         $(this).parent().toggleClass('in-focus');
     })
 
     /**
      * Modal
      */
-    $('#add-reviews-btn').on('click', function(e) {
+    $('#add-reviews-btn').on('click', function (e) {
         e.preventDefault();
         $('.modal-feedback').removeClass('is-close');
         $('.modal-feedback').addClass('is-active');
     })
 
-    $('#close-modal-feedback').on('click', function() {
+    $('#close-modal-feedback').on('click', function () {
         $('.modal-feedback').addClass('is-close');
 
-        setTimeout(function(){
+        setTimeout(function () {
             $('.modal-feedback').removeClass('is-active');
         }, 700)
     })
+
+    /**
+     * Change course list item
+     */
+
+    $('.faux-select').click(function () {
+        $(this).toggleClass('open');
+        $('.options', this).toggleClass('open');
+    });
+
+    $('.options li').click(function () {
+        var selection = $(this).text();
+        var dataValue = $(this).attr('data-value');
+        $('.selected-option span').text(selection);
+        $('.faux-select').attr('data-selected-value', dataValue);
+    });
+
 
 })(jQuery)
 

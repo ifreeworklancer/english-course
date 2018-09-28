@@ -2067,6 +2067,22 @@ window.jQuery = window.$ = __WEBPACK_IMPORTED_MODULE_0_jquery___default.a;
             $('.modal-feedback').removeClass('is-active');
         }, 700);
     });
+
+    /**
+     * Change course list item
+     */
+
+    $('.faux-select').click(function () {
+        $(this).toggleClass('open');
+        $('.options', this).toggleClass('open');
+    });
+
+    $('.options li').click(function () {
+        var selection = $(this).text();
+        var dataValue = $(this).attr('data-value');
+        $('.selected-option span').text(selection);
+        $('.faux-select').attr('data-selected-value', dataValue);
+    });
 })(jQuery);
 
 /**
