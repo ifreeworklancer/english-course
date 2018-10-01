@@ -1,0 +1,31 @@
+.section-page-secondary {
+    padding-top: 180px;
+    z-index: 10;
+}
+
+.page-secondary-banner {
+    @extend %pos;
+    bottom: auto;
+    padding-top: 700px;
+    @extend %img;
+    z-index: -1000;
+
+    &--big {
+        padding-top: 900px;
+    }
+}
+
+.page-secondary-title {
+    margin-bottom: 115px;
+    text-transform: uppercase;
+
+    &--big-margin {
+        margin-top: 135px;
+        margin-bottom: 210px;
+
+        @media (max-width: map_get($grid-breakpoints, sm)) {
+            margin-top: 50px;
+            margin-bottom: 70px;
+        }
+    }
+}

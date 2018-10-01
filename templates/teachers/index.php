@@ -123,14 +123,14 @@ require_once('../../views/base/header-secondary.php');
 
             <div class="row">
                 <div class="col-sm-4">
-                    <div class="pagination">
+                    <div class="pagination d-flex align-items-center">
                         <ul class="pagination-list list-unstyled d-flex">
                             <li class="pagination-list-item"><a class="pagination-list-item__link" href="#">1</a></li>
-                            <li class="pagination-list-item"><a class="pagination-list-item__link" href="#">2</a></li>
+                            <li class="pagination-list-item"><a class="pagination-list-item__link is-active" href="#">2</a></li>
                             <li class="pagination-list-item"><a class="pagination-list-item__link" href="#">3</a></li>
                             <li class="pagination-list-item"><a class="pagination-list-item__link" href="#">...</a></li>
                         </ul>
-                        <li class="pagination-next ml-4"><a class="pagination-next__link" href="#">Следующая </a></li>
+                        <div class="pagination-next ml-4"><a class="pagination-next__link" href="#">Следующая </a></div>
                     </div>
                 </div>
             </div>

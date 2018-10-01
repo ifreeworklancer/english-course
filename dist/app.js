@@ -2083,6 +2083,16 @@ window.jQuery = window.$ = __WEBPACK_IMPORTED_MODULE_0_jquery___default.a;
         $('.selected-option span').text(selection);
         $('.faux-select').attr('data-selected-value', dataValue);
     });
+
+    /**
+     * Pagination
+     */
+    $('.pagination-list-item__link').on('click', function (e) {
+        e.preventDefault();
+
+        $('.pagination-list-item__link').removeClass('is-active');
+        $(this).addClass('is-active');
+    });
 })(jQuery);
 
 /**

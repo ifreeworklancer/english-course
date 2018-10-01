@@ -11,8 +11,8 @@
         <?= $app_title ?>
     </title>
 
-    <link rel="stylesheet" href="fonts/font.css">
-    <link rel="stylesheet" href="dist/app.css">
+    <link rel="stylesheet" href="../../fonts/font.css">
+    <link rel="stylesheet" href="../../dist/app.css">
 </head>
 
 <body>
@@ -52,7 +52,7 @@
             <div class="header-item d-flex align-items-center">
                 <div class="logo position-relative">
                     <a href="#" class="logo-link d-flex justify-content-center align-items-center position-absolute"><img
-                            src="images/icon/logo/logo.png" alt="logo"></a>
+                            src="../../images/icon/logo/logo.png" alt="logo"></a>
                 </div>
                 <div class="search d-none d-sm-flex align-items-center">
                     <form id="form-search" class="form form--search">

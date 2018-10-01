@@ -7,12 +7,15 @@
 @import "base/btn";
 @import "base/section";
 @import "base/section-description";
+@import "base/page-secondary";
 
 @import "modules/menu";
 @import "modules/forms";
 @import "modules/sliders";
 @import "modules/more-info";
 @import "modules/modal";
+@import "modules/breadcrumbs";
+@import "modules/pagination";
 
 @import "layout/app-header";
 @import "layout/header-banner";
@@ -22,3 +25,6 @@
 @import "layout/reviews";
 @import "layout/feedback";
 @import "layout/app-footer";
+
+@import "layout/programs-page";
+@import "layout/teachers-page";

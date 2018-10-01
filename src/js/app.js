@@ -73,6 +73,16 @@ import 'flickity/dist/flickity.css';
         $('.faux-select').attr('data-selected-value', dataValue);
     });
 
+    /**
+     * Pagination
+     */
+    $('.pagination-list-item__link').on('click', function (e) {
+        e.preventDefault();
+
+        $('.pagination-list-item__link').removeClass('is-active');
+        $(this).addClass('is-active');
+    });
+
 
 })(jQuery)
 
