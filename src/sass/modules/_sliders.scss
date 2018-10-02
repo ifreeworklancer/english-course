@@ -217,3 +217,107 @@
         }
     }
 }
+
+.teachers-show-certificates-slider {
+
+    .flickity-page-dots {
+        width: auto;
+        left: 52%;
+        transform: translateX(-50%);
+        bottom: -47px;
+        z-index: 20;
+
+        li {
+            width: 5px;
+            height: 5px;
+            background: transparent;
+            border: 1px solid $dark;
+
+            @media (max-width: map_get($grid-breakpoints, sm)) {
+                margin: 0 4px;
+            }
+
+            &.is-selected {
+                border-color: #336265;
+                background: #336265;
+            }
+        }
+    }
+
+    &-item {
+        margin-right: 3.333333%;
+        width: 30%;
+
+        @media (max-width: map_get($grid-breakpoints, sm)) {
+            width: 100%;
+        }
+    }
+}
+
+.teachers-show-reviews-slider {
+
+    .flickity-page-dots {
+        width: auto;
+        left: 52%;
+        transform: translateX(-50%);
+        bottom: -47px;
+        z-index: 20;
+
+        li {
+            width: 5px;
+            height: 5px;
+            background: transparent;
+            border: 1px solid $dark;
+
+            @media (max-width: map_get($grid-breakpoints, sm)) {
+                margin: 0 4px;
+            }
+
+            &.is-selected {
+                border-color: #336265;
+                background: #336265;
+            }
+        }
+    }
+
+    &-item {
+        width: 100%;
+    }
+}
+
+.programs-show-teachers-slider {
+
+    .flickity-page-dots {
+        width: auto;
+        left: 52%;
+        transform: translateX(-50%);
+        bottom: -47px;
+        z-index: 20;
+
+        li {
+            width: 5px;
+            height: 5px;
+            background: transparent;
+            border: 1px solid $dark;
+
+            @media (max-width: map_get($grid-breakpoints, sm)) {
+                margin: 0 4px;
+            }
+
+            &.is-selected {
+                border-color: #336265;
+                background: #336265;
+            }
+        }
+    }
+
+    &-item {
+        margin-right: 3%;
+        width: 42%;
+
+        @media (max-width: map_get($grid-breakpoints, sm)) {
+            margin-right: 0;
+            width: 100%;
+        }
+    }
+}

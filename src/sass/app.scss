@@ -2,6 +2,8 @@
 @import "config/placeholder";
 
 @import "~bootstrap/scss/bootstrap";
+@import "~animate.css/animate.min.css";
+
 
 @import "base/body";
 @import "base/btn";
@@ -28,3 +30,6 @@
 
 @import "layout/programs-page";
 @import "layout/teachers-page";
+@import "layout/teachers-show";
+@import "layout/materials-page";
+@import "layout/programs-show";

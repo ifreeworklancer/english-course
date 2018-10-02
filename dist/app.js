@@ -2052,20 +2052,38 @@ window.jQuery = window.$ = __WEBPACK_IMPORTED_MODULE_0_jquery___default.a;
     });
 
     /**
-     * Modal
-     */
+    * Modal
+    */
     $('#add-reviews-btn').on('click', function (e) {
         e.preventDefault();
-        $('.modal-feedback').removeClass('is-close');
-        $('.modal-feedback').addClass('is-active');
+        $('.modal-feedback').addClass('is-active animated bounceInUp');
     });
 
-    $('#close-modal-feedback').on('click', function () {
-        $('.modal-feedback').addClass('is-close');
-
+    $('#close-modal-feedback').on('click', function (e) {
         setTimeout(function () {
-            $('.modal-feedback').removeClass('is-active');
-        }, 700);
+            $('.modal-feedback').removeClass('is-active bounceInUp');
+        }, 400);
+    });
+
+    $('.materials-page-item-content-img').on('click', function (e) {
+        e.preventDefault();
+        $('.show-materials-modal').addClass('is-active animated bounceInUp');
+        $('.modal-mask').addClass('is-active');
+    });
+
+    $('#close-modal-materials').on('click', function () {
+        setTimeout(function () {
+            $('.show-materials-modal').removeClass('is-active bounceInUp');
+            $('.modal-mask').removeClass('is-active');
+        }, 400);
+    });
+
+    $('#close-text-show-modal-materials').on('click', function (e) {
+        e.preventDefault();
+        setTimeout(function () {
+            $('.show-materials-modal').removeClass('is-active bounceInUp');
+            $('.modal-mask').removeClass('is-active');
+        }, 400);
     });
 
     /**
@@ -2158,6 +2176,90 @@ if ($('.reviews-slider')) {
         var nextArrowHeader = document.querySelector('.header-banner-slider-nav-arrow-next--reviews');
         nextArrowHeader.addEventListener('click', function () {
             flkty2.next(false, false);
+        });
+    }
+}
+
+if ($('.teachers-show-certificates-slider')) {
+
+    var elem3 = document.querySelector('.teachers-show-certificates-slider');
+    if (elem3) {
+
+        var flkty3 = new __WEBPACK_IMPORTED_MODULE_1_flickity___default.a(elem3, {
+            prevNextButtons: false,
+            contain: true,
+            draggable: false,
+            cellSelector: '.teachers-show-certificates-slider-item',
+            wrapAround: true
+        });
+
+        var prevArrowHeader = document.querySelector('.header-banner-slider-nav-arrow-prev--teachers-show-certificates');
+        prevArrowHeader.addEventListener('click', function () {
+            flkty3.previous(true, false);
+        });
+
+        var nextArrowHeader = document.querySelector('.header-banner-slider-nav-arrow-next--teachers-show-certificates');
+        nextArrowHeader.addEventListener('click', function () {
+            flkty3.next(true, false);
+        });
+    }
+}
+
+/**
+ * Slider teachers-show-reviews
+ */
+
+if ($('.teachers-show-reviews-slider')) {
+
+    var elem4 = document.querySelector('.teachers-show-reviews-slider');
+    if (elem4) {
+
+        var flkty4 = new __WEBPACK_IMPORTED_MODULE_1_flickity___default.a(elem4, {
+            prevNextButtons: false,
+            contain: true,
+            draggable: false,
+            cellSelector: '.teachers-show-reviews-slider-item',
+            wrapAround: true
+        });
+
+        var prevArrowHeader = document.querySelector('.header-banner-slider-nav-arrow-prev--teachers-show-reviews');
+        prevArrowHeader.addEventListener('click', function () {
+            flkty4.previous(true, false);
+        });
+
+        var nextArrowHeader = document.querySelector('.header-banner-slider-nav-arrow-next--teachers-show-reviews');
+        nextArrowHeader.addEventListener('click', function () {
+            flkty4.next(true, false);
+        });
+    }
+}
+
+/**
+ * Slider teachers-show-reviews
+ */
+
+if ($('.programs-show-teachers-slider')) {
+
+    var elem5 = document.querySelector('.programs-show-teachers-slider');
+    if (elem5) {
+
+        var flkty5 = new __WEBPACK_IMPORTED_MODULE_1_flickity___default.a(elem5, {
+            prevNextButtons: false,
+            contain: true,
+            draggable: false,
+            wrapAround: true,
+            cellAlign: 'left',
+            cellSelector: '.programs-show-teachers-slider-item'
+        });
+
+        var prevArrowHeader = document.querySelector('.header-banner-slider-nav-arrow-prev--programs-show-teachers');
+        prevArrowHeader.addEventListener('click', function () {
+            flkty5.previous(true, false);
+        });
+
+        var nextArrowHeader = document.querySelector('.header-banner-slider-nav-arrow-next--programs-show-teachers');
+        nextArrowHeader.addEventListener('click', function () {
+            flkty5.next(true, false);
         });
     }
 }
