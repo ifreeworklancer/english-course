@@ -210,9 +210,22 @@
             &__img {
                 position: relative;
                 margin-right: 40px;
+                margin-top: 15px;
                 width: 115px;
                 height: 115px;
                 @extend %img;
+
+                &::before {
+                    content: '';
+                    position: absolute;
+                    top: -15px;
+                    left: 20px;
+                    width: 115px;
+                    height: 115px;
+                    background: $primary;
+                    border-radius: 50%;
+                    z-index: -1;
+                }
             }
         }
     }

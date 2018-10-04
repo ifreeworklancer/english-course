@@ -1,29 +1,6 @@
 #programs-show {
     padding-bottom: 80px;
 
-    .programs-show-description {
-        display: flex;
-        justify-content: space-between;
-        align-content: center;
-        margin-bottom: 45px;
-        padding-bottom: 15px;
-        border-bottom: 1px solid $primary;
-
-
-        @media (max-width: map_get($grid-breakpoints, sm)) {
-            display: block;
-        }
-
-        &__btn {
-            padding: 10px 50px;
-
-
-            @media (max-width: map_get($grid-breakpoints, sm)) {
-                margin-top: 20px;
-            }
-        }
-    }
-
     .programs-show-teachers {
         margin-bottom: 80px;
 
@@ -46,6 +23,30 @@
         background: transparent;
     }
 }
+
+.programs-show-description {
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    margin-bottom: 45px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid $primary;
+
+
+    @media (max-width: map_get($grid-breakpoints, sm)) {
+        display: block;
+    }
+
+    &__btn {
+        padding: 10px 50px;
+
+
+        @media (max-width: map_get($grid-breakpoints, sm)) {
+            margin-top: 20px;
+        }
+    }
+}
+
 
 .programs-show-item {
     margin-bottom: 80px;

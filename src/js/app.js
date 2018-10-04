@@ -1,11 +1,14 @@
 import jquery from 'jquery';
 import Flickity from 'flickity';
+require('paroller.js');
 
 window.jQuery = window.$ = jquery;
 
 import 'flickity/dist/flickity.css';
 
 (function () {
+
+    $('.parallax-item').paroller();
 
     /**
      * Burger-menu
@@ -100,6 +103,14 @@ import 'flickity/dist/flickity.css';
         $('.pagination-list-item__link').removeClass('is-active');
         $(this).addClass('is-active');
     });
+
+    /**
+     * 
+     */
+    $('.questions-page-item').on('click', '.questions-page-item-title', function() {
+        $(this).toggleClass('is-active');
+        $(this).siblings().slideToggle();
+    })
 
 
 })(jQuery)

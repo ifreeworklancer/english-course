@@ -5,7 +5,7 @@ require_once('../../views/base/header-secondary.php');
 ?>
 
 
-<main>
+<main id="main-articles-show">
 
     <section id="articles-show" class="section-page-secondary">
 
@@ -100,7 +100,7 @@ require_once('../../views/base/header-secondary.php');
     <section id="secondary-show">
         <div class="container">
 
-            <div class="row mb-5">
+            <div class="row mb-3">
                 <div class="col-12">
                     <h2 class="section-title">
                         ВАМ МОГУТ БЫТЬ ИНТЕРЕСНЫ
