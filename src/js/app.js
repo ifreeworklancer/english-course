@@ -1,5 +1,6 @@
 import jquery from 'jquery';
 import Flickity from 'flickity';
+import 'flickity-as-nav-for';
 require('paroller.js');
 
 window.jQuery = window.$ = jquery;
@@ -16,6 +17,7 @@ import 'flickity/dist/flickity.css';
     $('.burger-menu').click(function () {
         var menu = $('.menu');
         $(this).toggleClass('active');
+
         if (!menu.hasClass('is-active')) {
             menu.addClass('is-active');
         } else {
@@ -43,7 +45,7 @@ import 'flickity/dist/flickity.css';
         $(this).parent().toggleClass('in-focus');
     })
 
-     /**
+    /**
      * Modal
      */
     $('#add-reviews-btn').on('click', function (e) {
@@ -105,12 +107,41 @@ import 'flickity/dist/flickity.css';
     });
 
     /**
-     * 
+     *  Qustions accordion
      */
-    $('.questions-page-item').on('click', '.questions-page-item-title', function() {
+    $('.questions-page-item').on('click', '.questions-page-item-title', function () {
         $(this).toggleClass('is-active');
         $(this).siblings().slideToggle();
     })
+
+    /**
+     * Jobs accordion
+     */
+
+    $('#open-jobs-page-respond').on('click', function (e) {
+        e.preventDefault();
+        if (!$('.jobs-page-respond').is(':visible')) {
+            $(this).toggleClass('is-active')
+            $('.jobs-page-respond').slideDown();
+        }
+    });
+
+    $('#open-jobs-page-all').on('click', function (e) {
+        e.preventDefault();
+        $(this).toggleClass('is-active');
+        $('.jobs-page-item').slideToggle();
+        if ($('.jobs-page-respond').is(':visible') && $('#open-jobs-page-respond').hasClass('is-active')) {
+            $('.jobs-page-respond').slideDown();
+            $('#open-jobs-page-respond').removeClass('is-active');
+        } else if ($('.jobs-page-respond').is(':visible') && !$('#open-jobs-page-respond').hasClass('is-active')) {
+            $('.jobs-page-respond').slideUp();
+        } else if (!$('.jobs-page-respond').is(':visible') && !$('#open-jobs-page-respond').hasClass('is-active')) {
+            $('.jobs-page-respond').slideDown();
+        }
+
+
+        $(this).hasClass('is-active') ? $(this).text('Закрыть') : $(this).text('Больше информации');
+    });
 
 
 })(jQuery)
@@ -270,4 +301,56 @@ if ($('.programs-show-teachers-slider')) {
             flkty5.next(true, false);
         });
     }
+}
+
+/**
+ * Sliders gallery
+ */
+
+var elem6 = document.querySelector('.gallery-page-slider');
+var galleryNavFor = document.querySelector('.gallery-page-slider-navFor');
+if (elem6) {
+
+    var flkty6 = new Flickity(elem6, {
+        prevNextButtons: false,
+        cellAlign: 'left',
+        contain: true,
+        draggable: false,
+        pageDots: false,
+        wrapAround: true,
+    });
+
+    var navFor = new Flickity(galleryNavFor, {
+        asNavFor: elem6,
+        cellAlign: 'left',
+        contain: true,
+        pageDots: false,
+        prevNextButtons: false,
+        wrapAround: false,
+        cellSelector: '.gallery-page-slider-navFor-item'
+    });
+
+
+    
+    var indexGallerySlider = document.querySelector('.gallery-page-slider-num-item-index');
+    indexGallerySlider.innerText = flkty6.selectedIndex + 1;
+
+    var prevArrowHeader = document.querySelector('.header-banner-slider-nav-arrow-prev--gallery-page');
+
+    prevArrowHeader.addEventListener('click', function () {
+        flkty6.previous(false, false);
+        indexGallerySlider.innerText = flkty6.selectedIndex + 1;
+    });
+
+    var nextArrowHeader = document.querySelector('.header-banner-slider-nav-arrow-next--gallery-page');
+
+    nextArrowHeader.addEventListener('click', function () {
+        flkty6.next(false, false);
+        indexGallerySlider.innerText = flkty6.selectedIndex + 1;
+    });
+
+    var lastGallerySlider = document.querySelector('.gallery-page-slider-num-item-last');
+
+    lastGallerySlider.innerText = flkty6.getCellElements().length;
+
 }

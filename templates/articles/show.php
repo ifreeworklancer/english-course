@@ -24,7 +24,7 @@ require_once('../../views/base/header-secondary.php');
 
             <div class="articles-show-content">
                 <div class="row">
-                    <div class="col-sm-11 mx-auto px-5 px-sm-0">
+                    <div class="col-sm-10 mx-auto px-5 px-sm-0">
                         <h2 class="articles-show-title py-3 mb-3">
                             Какие курсы английского языка лучше?
                         </h2>
@@ -75,7 +75,7 @@ require_once('../../views/base/header-secondary.php');
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-sm-11 mx-auto px-5 px-sm-0">
+                    <div class="col-sm-10 mx-auto px-5 px-sm-0">
                         <p class="articles-show-item__text">
                             Спрос рождает предложение, начиная выбирать курсы изучения английского языка, мы теряемся
                             от пестроты разнообразия методик и школ, от рекламных слоганов и обещаний различных

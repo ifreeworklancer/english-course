@@ -24,7 +24,25 @@ require_once('../../views/base/header-secondary.php');
             <div class="gallery-page-content">
 
                 <div class="row">
-                    <div class="col-12 p-0">
+                    <div class="col-12">
+                        <div class="header-banner-slider-nav d-flex justify-content-betweem align-items-center position-absolute">
+                            <div class="header-banner-slider-nav-arrow mx-auto d-flex justify-content-between align-items-center">
+                                <div class="header-banner-slider-nav-arrow-prev header-banner-slider-nav-arrow-prev--gallery-page"></div>
+                                <div class="header-banner-slider-nav-arrow-next header-banner-slider-nav-arrow-next--gallery-page"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- @TODO fullscreen slider -->
+
+                <div class="gallery-page-slider-num">
+                    <div class="gallery-page-slider-num-item gallery-page-slider-num-item-index"></div>
+                    <div class="gallery-page-slider-num-item gallery-page-slider-num-item-last"></div>
+                </div>
+
+                <div class="row">
+                    <div class="col-12">
                         <div class="gallery-page-slider">
                             <div class="gallery-page-slider-item">
                                 <div class="gallery-page-slider-item-info">

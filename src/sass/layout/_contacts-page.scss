@@ -1,0 +1,71 @@
+#contacts-page {
+    padding-bottom: 620px;
+    background: url('../images/bg/contacts-bg.jpg') 50% 50% /cover no-repeat;
+
+    .teachers-quote {
+        margin-bottom: 160px;
+    }
+}
+
+.contacts-page__title {
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid $primary;
+}
+
+.contacts-page-content {
+    position: relative;
+    padding-bottom: 100px;
+
+    &::before {
+        content: '';
+        @extend %pos;
+        top: -90px;
+        left: -100px;
+        right: -100px;
+        background: #fff;
+        box-shadow: 0px 12px 18px 3px rgba(0, 0, 0, 0.14);
+        z-index: -1;
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
+        left: -100px;
+        right: -100px;
+        bottom: 0;
+        height: 10px;
+        background: $primary;
+        z-index: -1;
+    }
+}
+
+.contacts-page-item {
+
+    &__title {
+        position: relative;
+        margin: 25px 0;
+        padding-left: 50px;
+        letter-spacing: 4px;
+        word-spacing: 6px;
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
+            width: 35px;
+            height: 1px;
+            background: $dark;
+        }
+    }
+
+    &-list {
+        margin: 0;
+
+        &__item {
+            margin-bottom: 10px;
+        }
+    }
+}

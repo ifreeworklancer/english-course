@@ -4,23 +4,23 @@
     .page-secondary-banner {
         padding-top: 630px;
     }
+}
 
-    .teachers-quote {
-        margin-bottom: 100px;
-        font-size: 30px;
+.teachers-quote {
+    margin-bottom: 100px;
+    font-size: 30px;
 
-        @media (max-width: map_get($grid-breakpoints, sm)) {
-            font-size: 24px;
-        }
+    @media (max-width: map_get($grid-breakpoints, sm)) {
+        font-size: 24px;
+    }
 
-        &-name {
-            font-family: 'FuturaMediumC', sans-serif;
+    &-name {
+        font-family: 'FuturaMediumC', sans-serif;
 
-            &-decoration {
-                width: 60%;
-                height: 1px;
-                background: $primary;
-            }
+        &-decoration {
+            width: 60%;
+            height: 1px;
+            background: $primary;
         }
     }
 }
