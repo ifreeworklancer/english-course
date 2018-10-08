@@ -3,16 +3,10 @@
 .articles-page-content {
     position: relative;
     padding-bottom: 15px;
+    @extend %decor-content-normal;
 
-    &::after {
-        content: '';
-        position: absolute;
-        left: -7px;
-        right: -7px;
-        bottom: 0;
-        height: 10px;
-        background: $primary;
-        z-index: -1;
+    &::before {
+        display: none;
     }
 }
 

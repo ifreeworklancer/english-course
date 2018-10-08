@@ -77,14 +77,9 @@
 .gallery-page-content {
     position: relative;
     padding-bottom: 10px;
+    @extend %decor-content-normal;
 
-    &::after {
-        content: '';
-        @extend %pos;
-        top: auto;
-        bottom: 0;
-        height: 10px;
-        background: $primary;
-        z-index: -1;
+    &::before {
+        display: none;
     }
 }

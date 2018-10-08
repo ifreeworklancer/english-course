@@ -145,6 +145,7 @@
 
     .form-check-label {
         position: relative;
+        padding-left: 25px;
         font-family: 'FuturaLightC', sans-serif;
         font-size: 22px;
         color: $secondary;
@@ -157,7 +158,7 @@
             content: '';
             position: absolute;
             top: 50%;
-            left: -25px;
+            left: 0;
             transform: translateY(-50%);
             width: 15px;
             height: 15px;

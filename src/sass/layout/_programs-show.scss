@@ -51,29 +51,14 @@
 .programs-show-item {
     margin-bottom: 80px;
     padding: 70px 0 80px;
+    @extend %decor-content-big;
 
     &__title {
         width: 90%;
         border-bottom: 1px solid $primary;
     }
 
-
     &::before {
-        content: '';
-        @extend %pos;
-        left: -125px;
-        right: -125px;
-        background: #fff;
-        box-shadow: 0px 12px 18px 3px rgba(0, 0, 0, 0.14);
-    }
-
-    &::after {
-        content: '';
-        @extend %pos;
-        top: auto;
-        left: -125px;
-        right: -125px;
-        height: 10px;
-        background: $primary;
+        top: 0;
     }
 }

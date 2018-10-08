@@ -1,33 +1,12 @@
 .jobs-page-content {
     position: relative;
     margin-bottom: 80px;
-
+    @extend %decor-content-big;
     
     @media (max-width: map_get($grid-breakpoints, sm)) {
         margin-top: 120px;
     }
 
-    &::before {
-        content: '';
-        @extend %pos;
-        top: -90px;
-        left: -100px;
-        right: -100px;
-        background: #fff;
-        box-shadow: 0px 12px 18px 3px rgba(0, 0, 0, 0.14);
-        z-index: -1;
-    }
-
-    &::after {
-        content: '';
-        position: absolute;
-        left: -100px;
-        right: -100px;
-        bottom: 0;
-        height: 10px;
-        background: $primary;
-        z-index: -1;
-    }
 }
 
 .jobs-page-brief {

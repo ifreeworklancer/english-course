@@ -143,6 +143,15 @@ import 'flickity/dist/flickity.css';
         $(this).hasClass('is-active') ? $(this).text('Закрыть') : $(this).text('Больше информации');
     });
 
+    /**
+     * Cabinet
+     */
+    $('.cabinet-page-tabs-header-list').on('click', 'li:not(.active)', function () {
+        $(this)
+            .addClass('active').siblings().removeClass('active')
+            .closest('.cabinet-page-tabs', '').find('.cabinet-page-tabs-body-item').removeClass('active').eq($(this).index()).addClass('active');
+    });
+
 
 })(jQuery)
 
@@ -331,7 +340,7 @@ if (elem6) {
     });
 
 
-    
+
     var indexGallerySlider = document.querySelector('.gallery-page-slider-num-item-index');
     indexGallerySlider.innerText = flkty6.selectedIndex + 1;
 

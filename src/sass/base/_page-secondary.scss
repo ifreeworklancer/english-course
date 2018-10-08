@@ -1,6 +1,54 @@
 .section-page-secondary {
     padding-top: 180px;
     z-index: 10;
+
+    &--login {
+
+        @media (min-width: map_get($grid-breakpoints, sm)) {
+            height: 100vh;
+        }
+    }
+
+    &--registration {
+        background: $dark;
+
+        @media(min-width: 1800px) {
+            height: 100vh;
+        }
+    }
+}
+
+.registration-img {
+    @extend %pos;
+    right: 50%;
+    @extend %img;
+
+    @media (max-width: map_get($grid-breakpoints, md)) {
+        display: none;
+    }
+}
+
+.registration-title {
+
+    @media (max-width: map_get($grid-breakpoints, sm)) {
+        font-size: 24px;
+    }
+}
+
+.social-registration {
+    margin-bottom: 80px;
+}
+
+.registration-btn {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #222832;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+    line-height: 1;
 }
 
 .page-secondary-banner {
@@ -53,7 +101,7 @@
         border-bottom: 1px solid $primary;
     }
 
-    &::before{
+    &::before {
         content: '';
         position: absolute;
         top: 0;

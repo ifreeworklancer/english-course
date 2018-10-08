@@ -290,7 +290,7 @@
                                     с видеоотзывом (mp4, avi)</label>
                                 <input type="file" class="form-control-file d-none" id="file--modal-feedback">
                             </div>
-                            <div class="form-group form-check">
+                            <div class="form-group form-check pl-0">
                                 <input type="checkbox" class="form-check-input d-none" id="agree--modal-feedback">
                                 <label class="label-placeholder form-check-label" for="agree--modal-feedback">
                                     Я соглашаюсь с <a href="#" class="label-placeholder__link">правилами пользования</a>

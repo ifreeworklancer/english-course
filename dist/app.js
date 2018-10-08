@@ -60,7 +60,7 @@
 /******/ 	__webpack_require__.p = "/";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 7);
+/******/ 	return __webpack_require__(__webpack_require__.s = 8);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -323,7 +323,7 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;// Flickity main
     // AMD
     !(__WEBPACK_AMD_DEFINE_ARRAY__ = [
       __webpack_require__(2),
-      __webpack_require__(4),
+      __webpack_require__(5),
       __webpack_require__(0),
       __webpack_require__(11),
       __webpack_require__(12),
@@ -11719,6 +11719,57 @@ return jQuery;
 /* 4 */
 /***/ (function(module, exports, __webpack_require__) {
 
+var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
+ * Flickity v2.1.2
+ * Touch, responsive, flickable carousels
+ *
+ * Licensed GPLv3 for open source use
+ * or Flickity Commercial License for commercial use
+ *
+ * https://flickity.metafizzy.co
+ * Copyright 2015-2018 Metafizzy
+ */
+
+( function( window, factory ) {
+  // universal module definition
+  /* jshint strict: false */
+  if ( true ) {
+    // AMD
+    !(__WEBPACK_AMD_DEFINE_ARRAY__ = [
+      __webpack_require__(1),
+      __webpack_require__(14),
+      __webpack_require__(16),
+      __webpack_require__(17),
+      __webpack_require__(18),
+      __webpack_require__(19),
+      __webpack_require__(20)
+    ], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
+				__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
+				(__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__),
+				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
+  } else if ( typeof module == 'object' && module.exports ) {
+    // CommonJS
+    module.exports = factory(
+      require('./flickity'),
+      require('./drag'),
+      require('./prev-next-button'),
+      require('./page-dots'),
+      require('./player'),
+      require('./add-remove-cell'),
+      require('./lazyload')
+    );
+  }
+
+})( window, function factory( Flickity ) {
+  /*jshint strict: false*/
+  return Flickity;
+});
+
+
+/***/ }),
+/* 5 */
+/***/ (function(module, exports, __webpack_require__) {
+
 var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
  * getSize v2.0.3
  * measure size of elements
@@ -11933,7 +11984,7 @@ return getSize;
 
 
 /***/ }),
-/* 5 */
+/* 6 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
@@ -12241,7 +12292,7 @@ return Unipointer;
 
 
 /***/ }),
-/* 6 */
+/* 7 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
@@ -12259,7 +12310,7 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
   if ( true ) {
     // AMD
     !(__WEBPACK_AMD_DEFINE_ARRAY__ = [
-      __webpack_require__(5)
+      __webpack_require__(6)
     ], __WEBPACK_AMD_DEFINE_RESULT__ = (function( Unipointer ) {
       return factory( window, Unipointer );
     }).apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__),
@@ -12361,31 +12412,31 @@ return TapListener;
 
 
 /***/ }),
-/* 7 */
+/* 8 */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(8);
-module.exports = __webpack_require__(27);
+__webpack_require__(9);
+module.exports = __webpack_require__(28);
 
 
 /***/ }),
-/* 8 */
+/* 9 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_jquery__ = __webpack_require__(3);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_jquery___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_jquery__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_flickity__ = __webpack_require__(9);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_flickity__ = __webpack_require__(4);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_flickity___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_flickity__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_flickity_as_nav_for__ = __webpack_require__(30);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_flickity_as_nav_for__ = __webpack_require__(21);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_flickity_as_nav_for___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_flickity_as_nav_for__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_flickity_dist_flickity_css__ = __webpack_require__(22);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_flickity_dist_flickity_css__ = __webpack_require__(23);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_flickity_dist_flickity_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_flickity_dist_flickity_css__);
 
 
 
-__webpack_require__(21);
+__webpack_require__(22);
 
 window.jQuery = window.$ = __WEBPACK_IMPORTED_MODULE_0_jquery___default.a;
 
@@ -12524,6 +12575,13 @@ window.jQuery = window.$ = __WEBPACK_IMPORTED_MODULE_0_jquery___default.a;
         }
 
         $(this).hasClass('is-active') ? $(this).text('Закрыть') : $(this).text('Больше информации');
+    });
+
+    /**
+     * Cabinet
+     */
+    $('.cabinet-page-tabs-header-list').on('click', 'li:not(.active)', function () {
+        $(this).addClass('active').siblings().removeClass('active').closest('.cabinet-page-tabs', '').find('.cabinet-page-tabs-body-item').removeClass('active').eq($(this).index()).addClass('active');
     });
 })(jQuery);
 
@@ -12728,57 +12786,6 @@ if (elem6) {
 }
 
 /***/ }),
-/* 9 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
- * Flickity v2.1.2
- * Touch, responsive, flickable carousels
- *
- * Licensed GPLv3 for open source use
- * or Flickity Commercial License for commercial use
- *
- * https://flickity.metafizzy.co
- * Copyright 2015-2018 Metafizzy
- */
-
-( function( window, factory ) {
-  // universal module definition
-  /* jshint strict: false */
-  if ( true ) {
-    // AMD
-    !(__WEBPACK_AMD_DEFINE_ARRAY__ = [
-      __webpack_require__(1),
-      __webpack_require__(14),
-      __webpack_require__(16),
-      __webpack_require__(17),
-      __webpack_require__(18),
-      __webpack_require__(19),
-      __webpack_require__(20)
-    ], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
-				__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
-				(__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__),
-				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
-  } else if ( typeof module == 'object' && module.exports ) {
-    // CommonJS
-    module.exports = factory(
-      require('./flickity'),
-      require('./drag'),
-      require('./prev-next-button'),
-      require('./page-dots'),
-      require('./player'),
-      require('./add-remove-cell'),
-      require('./lazyload')
-    );
-  }
-
-})( window, function factory( Flickity ) {
-  /*jshint strict: false*/
-  return Flickity;
-});
-
-
-/***/ }),
 /* 10 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -12852,7 +12859,7 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;// Flickity.Cell
   if ( true ) {
     // AMD
     !(__WEBPACK_AMD_DEFINE_ARRAY__ = [
-      __webpack_require__(4)
+      __webpack_require__(5)
     ], __WEBPACK_AMD_DEFINE_RESULT__ = (function( getSize ) {
       return factory( window, getSize );
     }).apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__),
@@ -13652,7 +13659,7 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
   if ( true ) {
     // AMD
     !(__WEBPACK_AMD_DEFINE_ARRAY__ = [
-      __webpack_require__(5)
+      __webpack_require__(6)
     ], __WEBPACK_AMD_DEFINE_RESULT__ = (function( Unipointer ) {
       return factory( window, Unipointer );
     }).apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__),
@@ -13931,7 +13938,7 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;// prev/next but
     // AMD
     !(__WEBPACK_AMD_DEFINE_ARRAY__ = [
       __webpack_require__(1),
-      __webpack_require__(6),
+      __webpack_require__(7),
       __webpack_require__(0)
     ], __WEBPACK_AMD_DEFINE_RESULT__ = (function( Flickity, TapListener, utils ) {
       return factory( window, Flickity, TapListener, utils );
@@ -14159,7 +14166,7 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;// page dots
     // AMD
     !(__WEBPACK_AMD_DEFINE_ARRAY__ = [
       __webpack_require__(1),
-      __webpack_require__(6),
+      __webpack_require__(7),
       __webpack_require__(0)
     ], __WEBPACK_AMD_DEFINE_RESULT__ = (function( Flickity, TapListener, utils ) {
       return factory( window, Flickity, TapListener, utils );
@@ -14849,6 +14856,165 @@ return Flickity;
 /* 21 */
 /***/ (function(module, exports, __webpack_require__) {
 
+var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
+ * Flickity asNavFor v2.0.1
+ * enable asNavFor for Flickity
+ */
+
+/*jshint browser: true, undef: true, unused: true, strict: true*/
+
+( function( window, factory ) {
+  // universal module definition
+  /*jshint strict: false */ /*globals define, module, require */
+  if ( true ) {
+    // AMD
+    !(__WEBPACK_AMD_DEFINE_ARRAY__ = [
+      __webpack_require__(4),
+      __webpack_require__(0)
+    ], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
+				__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
+				(__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__),
+				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
+  } else if ( typeof module == 'object' && module.exports ) {
+    // CommonJS
+    module.exports = factory(
+      require('flickity'),
+      require('fizzy-ui-utils')
+    );
+  } else {
+    // browser global
+    window.Flickity = factory(
+      window.Flickity,
+      window.fizzyUIUtils
+    );
+  }
+
+}( window, function factory( Flickity, utils ) {
+
+'use strict';
+
+// -------------------------- asNavFor prototype -------------------------- //
+
+// Flickity.defaults.asNavFor = null;
+
+Flickity.createMethods.push('_createAsNavFor');
+
+var proto = Flickity.prototype;
+
+proto._createAsNavFor = function() {
+  this.on( 'activate', this.activateAsNavFor );
+  this.on( 'deactivate', this.deactivateAsNavFor );
+  this.on( 'destroy', this.destroyAsNavFor );
+
+  var asNavForOption = this.options.asNavFor;
+  if ( !asNavForOption ) {
+    return;
+  }
+  // HACK do async, give time for other flickity to be initalized
+  var _this = this;
+  setTimeout( function initNavCompanion() {
+    _this.setNavCompanion( asNavForOption );
+  });
+};
+
+proto.setNavCompanion = function( elem ) {
+  elem = utils.getQueryElement( elem );
+  var companion = Flickity.data( elem );
+  // stop if no companion or companion is self
+  if ( !companion || companion == this ) {
+    return;
+  }
+
+  this.navCompanion = companion;
+  // companion select
+  var _this = this;
+  this.onNavCompanionSelect = function() {
+    _this.navCompanionSelect();
+  };
+  companion.on( 'select', this.onNavCompanionSelect );
+  // click
+  this.on( 'staticClick', this.onNavStaticClick );
+
+  this.navCompanionSelect( true );
+};
+
+proto.navCompanionSelect = function( isInstant ) {
+  if ( !this.navCompanion ) {
+    return;
+  }
+  // select slide that matches first cell of slide
+  var selectedCell = this.navCompanion.selectedCells[0];
+  var firstIndex = this.navCompanion.cells.indexOf( selectedCell );
+  var lastIndex = firstIndex + this.navCompanion.selectedCells.length - 1;
+  var selectIndex = Math.floor( lerp( firstIndex, lastIndex,
+    this.navCompanion.cellAlign ) );
+  this.selectCell( selectIndex, false, isInstant );
+  // set nav selected class
+  this.removeNavSelectedElements();
+  // stop if companion has more cells than this one
+  if ( selectIndex >= this.cells.length ) {
+    return;
+  }
+
+  var selectedCells = this.cells.slice( firstIndex, lastIndex + 1 );
+  this.navSelectedElements = selectedCells.map( function( cell ) {
+    return cell.element;
+  });
+  this.changeNavSelectedClass('add');
+};
+
+function lerp( a, b, t ) {
+  return ( b - a ) * t + a;
+}
+
+proto.changeNavSelectedClass = function( method ) {
+  this.navSelectedElements.forEach( function( navElem ) {
+    navElem.classList[ method ]('is-nav-selected');
+  });
+};
+
+proto.activateAsNavFor = function() {
+  this.navCompanionSelect( true );
+};
+
+proto.removeNavSelectedElements = function() {
+  if ( !this.navSelectedElements ) {
+    return;
+  }
+  this.changeNavSelectedClass('remove');
+  delete this.navSelectedElements;
+};
+
+proto.onNavStaticClick = function( event, pointer, cellElement, cellIndex ) {
+  if ( typeof cellIndex == 'number' ) {
+    this.navCompanion.selectCell( cellIndex );
+  }
+};
+
+proto.deactivateAsNavFor = function() {
+  this.removeNavSelectedElements();
+};
+
+proto.destroyAsNavFor = function() {
+  if ( !this.navCompanion ) {
+    return;
+  }
+  this.navCompanion.off( 'select', this.onNavCompanionSelect );
+  this.off( 'staticClick', this.onNavStaticClick );
+  delete this.navCompanion;
+};
+
+// -----  ----- //
+
+return Flickity;
+
+}));
+
+
+/***/ }),
+/* 22 */
+/***/ (function(module, exports, __webpack_require__) {
+
 var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/**
  * jQuery plugin paroller.js v1.4.4
  * https://github.com/tgomilar/paroller.js
@@ -15074,13 +15240,13 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
 
 
 /***/ }),
-/* 22 */
+/* 23 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(23);
+var content = __webpack_require__(24);
 if(typeof content === 'string') content = [[module.i, content, '']];
 // Prepare cssTransformation
 var transform;
@@ -15088,7 +15254,7 @@ var transform;
 var options = {}
 options.transform = transform
 // add the styles to the DOM
-var update = __webpack_require__(25)(content, options);
+var update = __webpack_require__(26)(content, options);
 if(content.locals) module.exports = content.locals;
 // Hot Module Replacement
 if(false) {
@@ -15105,10 +15271,10 @@ if(false) {
 }
 
 /***/ }),
-/* 23 */
+/* 24 */
 /***/ (function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__(24)(false);
+exports = module.exports = __webpack_require__(25)(false);
 // imports
 
 
@@ -15119,7 +15285,7 @@ exports.push([module.i, "/*! Flickity v2.1.2\nhttps://flickity.metafizzy.co\n---
 
 
 /***/ }),
-/* 24 */
+/* 25 */
 /***/ (function(module, exports) {
 
 /*
@@ -15201,7 +15367,7 @@ function toComment(sourceMap) {
 
 
 /***/ }),
-/* 25 */
+/* 26 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /*
@@ -15247,7 +15413,7 @@ var singleton = null;
 var	singletonCounter = 0;
 var	stylesInsertedAtTop = [];
 
-var	fixUrls = __webpack_require__(26);
+var	fixUrls = __webpack_require__(27);
 
 module.exports = function(list, options) {
 	if (typeof DEBUG !== "undefined" && DEBUG) {
@@ -15560,7 +15726,7 @@ function updateLink (link, options, obj) {
 
 
 /***/ }),
-/* 26 */
+/* 27 */
 /***/ (function(module, exports) {
 
 
@@ -15655,171 +15821,10 @@ module.exports = function (css) {
 
 
 /***/ }),
-/* 27 */
+/* 28 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
-
-/***/ }),
-/* 28 */,
-/* 29 */,
-/* 30 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
- * Flickity asNavFor v2.0.1
- * enable asNavFor for Flickity
- */
-
-/*jshint browser: true, undef: true, unused: true, strict: true*/
-
-( function( window, factory ) {
-  // universal module definition
-  /*jshint strict: false */ /*globals define, module, require */
-  if ( true ) {
-    // AMD
-    !(__WEBPACK_AMD_DEFINE_ARRAY__ = [
-      __webpack_require__(9),
-      __webpack_require__(0)
-    ], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
-				__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
-				(__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__),
-				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
-  } else if ( typeof module == 'object' && module.exports ) {
-    // CommonJS
-    module.exports = factory(
-      require('flickity'),
-      require('fizzy-ui-utils')
-    );
-  } else {
-    // browser global
-    window.Flickity = factory(
-      window.Flickity,
-      window.fizzyUIUtils
-    );
-  }
-
-}( window, function factory( Flickity, utils ) {
-
-'use strict';
-
-// -------------------------- asNavFor prototype -------------------------- //
-
-// Flickity.defaults.asNavFor = null;
-
-Flickity.createMethods.push('_createAsNavFor');
-
-var proto = Flickity.prototype;
-
-proto._createAsNavFor = function() {
-  this.on( 'activate', this.activateAsNavFor );
-  this.on( 'deactivate', this.deactivateAsNavFor );
-  this.on( 'destroy', this.destroyAsNavFor );
-
-  var asNavForOption = this.options.asNavFor;
-  if ( !asNavForOption ) {
-    return;
-  }
-  // HACK do async, give time for other flickity to be initalized
-  var _this = this;
-  setTimeout( function initNavCompanion() {
-    _this.setNavCompanion( asNavForOption );
-  });
-};
-
-proto.setNavCompanion = function( elem ) {
-  elem = utils.getQueryElement( elem );
-  var companion = Flickity.data( elem );
-  // stop if no companion or companion is self
-  if ( !companion || companion == this ) {
-    return;
-  }
-
-  this.navCompanion = companion;
-  // companion select
-  var _this = this;
-  this.onNavCompanionSelect = function() {
-    _this.navCompanionSelect();
-  };
-  companion.on( 'select', this.onNavCompanionSelect );
-  // click
-  this.on( 'staticClick', this.onNavStaticClick );
-
-  this.navCompanionSelect( true );
-};
-
-proto.navCompanionSelect = function( isInstant ) {
-  if ( !this.navCompanion ) {
-    return;
-  }
-  // select slide that matches first cell of slide
-  var selectedCell = this.navCompanion.selectedCells[0];
-  var firstIndex = this.navCompanion.cells.indexOf( selectedCell );
-  var lastIndex = firstIndex + this.navCompanion.selectedCells.length - 1;
-  var selectIndex = Math.floor( lerp( firstIndex, lastIndex,
-    this.navCompanion.cellAlign ) );
-  this.selectCell( selectIndex, false, isInstant );
-  // set nav selected class
-  this.removeNavSelectedElements();
-  // stop if companion has more cells than this one
-  if ( selectIndex >= this.cells.length ) {
-    return;
-  }
-
-  var selectedCells = this.cells.slice( firstIndex, lastIndex + 1 );
-  this.navSelectedElements = selectedCells.map( function( cell ) {
-    return cell.element;
-  });
-  this.changeNavSelectedClass('add');
-};
-
-function lerp( a, b, t ) {
-  return ( b - a ) * t + a;
-}
-
-proto.changeNavSelectedClass = function( method ) {
-  this.navSelectedElements.forEach( function( navElem ) {
-    navElem.classList[ method ]('is-nav-selected');
-  });
-};
-
-proto.activateAsNavFor = function() {
-  this.navCompanionSelect( true );
-};
-
-proto.removeNavSelectedElements = function() {
-  if ( !this.navSelectedElements ) {
-    return;
-  }
-  this.changeNavSelectedClass('remove');
-  delete this.navSelectedElements;
-};
-
-proto.onNavStaticClick = function( event, pointer, cellElement, cellIndex ) {
-  if ( typeof cellIndex == 'number' ) {
-    this.navCompanion.selectCell( cellIndex );
-  }
-};
-
-proto.deactivateAsNavFor = function() {
-  this.removeNavSelectedElements();
-};
-
-proto.destroyAsNavFor = function() {
-  if ( !this.navCompanion ) {
-    return;
-  }
-  this.navCompanion.off( 'select', this.onNavCompanionSelect );
-  this.off( 'staticClick', this.onNavStaticClick );
-  delete this.navCompanion;
-};
-
-// -----  ----- //
-
-return Flickity;
-
-}));
-
 
 /***/ })
 /******/ ]);
